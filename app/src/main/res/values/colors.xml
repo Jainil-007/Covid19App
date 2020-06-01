@@ -9,9 +9,18 @@
     <color name="grey">#F0F2F3</color>
     <color name="bg_color">#FDFDFD</color>
     <color name="dark_grey">#ACB5C7</color>
-    <color name="recovered">#08CAFD</color>
-    <color name="deaths">#FE5B4D</color>
+
     <color name="confirmed">#003CBF</color>
     <color name="yellow">#FFDA2D</color>
     <color name="colorPrimaryDark1">#F64540DC</color>
+
+    <color name="color_one">#fb7268</color>
+    <color name="color_white">#ededf2</color>
+    <color name="color_two">#E3E0E0</color>
+
+    <color name="cases">#FFA726</color>
+    <color name="recovered">#66BB6A</color>
+    <color name="deaths">#EF5350</color>
+    <color name="active">#29B6F6</color>
+
 </resources>
