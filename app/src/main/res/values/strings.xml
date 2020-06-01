@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Covid19</string>
+
+    <string name="symptomsString">
+        The COVID-19 virus affects different people in different ways.  COVID-19 is a respiratory disease and most infected people will develop mild to moderate symptoms and recover without requiring special treatment.  People who have underlying medical conditions and those over 60 years old have a higher risk of developing severe disease and death.\n\nCommon symptoms include:\n1. fever\n2. tiredness\n3. dry cough.\n\n
+Other symptoms include:\n4. shortness of breath\n5. aches and pains\n6. sore throat\n
+and very few people will report diarrhoea, nausea or a runny nose.\n\nPeople with mild symptoms who are otherwise healthy should self-isolate and contact their medical provider or a COVID-19 information line for advice on testing and referral.\n\nPeople with fever, cough or difficulty breathing should call their doctor and seek medical attention.
+    </string>
+
+
+
+</resources>
