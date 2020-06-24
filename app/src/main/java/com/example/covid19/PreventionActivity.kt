@@ -4,7 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 
 
 
-class Prevention : AppCompatActivity() {
+class PreventionActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

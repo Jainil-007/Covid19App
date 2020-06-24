@@ -4,7 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 
 
 
-    class Symptom : AppCompatActivity() {
+    class SymptomActivity : AppCompatActivity() {
 
         override fun onCreate(savedInstanceState: Bundle?) {
             super.onCreate(savedInstanceState)
