@@ -17,7 +17,9 @@ class Home_ScreenActivity : AppCompatActivity() {
         prevention.setOnClickListener{ startActivity(Intent(this@Home_ScreenActivity, SymptomActivity::class.java)) }
         NZGOV.setOnClickListener { startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(ConstantValues.NZgov))) }
         Reports.setOnClickListener{ startActivity(Intent(this@Home_ScreenActivity, ReportActivity::class.java)) }
-        condata.setOnClickListener{ startActivity(Intent(this@Home_ScreenActivity, AffectedCountriesActivity::class.java)) }
+        condata.setOnClickListener{ startActivity(Intent(this@Home_ScreenActivity, AffectedCountries::class.java)) }
+        qrCodeScanner.setOnClickListener{ startActivity(Intent(this@Home_ScreenActivity, QrCodeActivity::class.java)) }
+
     }
 }
 
