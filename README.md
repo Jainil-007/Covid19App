@@ -1,1 +1,2 @@
-This is COVID-19 android application made by mefor my uni project.
+This is COVID-19 android application made for my project at MIT.
+
