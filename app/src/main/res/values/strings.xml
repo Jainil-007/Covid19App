@@ -7,5 +7,13 @@ Other symptoms include:\n4. shortness of breath\n5. aches and pains\n6. sore thr
 and very few people will report diarrhoea, nausea or a runny nose.\n\nPeople with mild symptoms who are otherwise healthy should self-isolate and contact their medical provider or a COVID-19 information line for advice on testing and referral.\n\nPeople with fever, cough or difficulty breathing should call their doctor and seek medical attention.
     </string>
 
+    <string name="preventionString">
+ Protect yourself and others around you by knowing the facts and taking appropriate precautions. Follow advice provided by your local health authority./n To prevent the spread of COVID-19:
+\n1. Clean your hands often. Use soap and water, or an alcohol-based hand rub.\n2.Maintain a safe distance from anyone who is coughing or sneezing.\n3.Wear a mask when physical distancing is not possible.\n4. Don’t touch your eyes, nose or mouth.\n5. Cover your nose and mouth with your bent elbow or a tissue when you cough or sneeze.
+\n6. Stay home if you feel unwell.\n7If you have a fever, cough and difficulty breathing, seek medical attention./n
+Calling in advance allows your healthcare provider to quickly direct you to the right health facility. This protects you, and prevents the spread of viruses and other infections.
+
+    </string>
+
 
 </resources>

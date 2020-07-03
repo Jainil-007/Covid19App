@@ -1,6 +1,7 @@
-package com.example.covid19;
+package com.example.covid19.AffectedCountries;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.widget.TextView;
@@ -8,9 +9,15 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.covid19.R;
+
+import org.eazegraph.lib.charts.PieChart;
+import org.eazegraph.lib.models.PieModel;
+
 public class DetailActivity extends AppCompatActivity {
 
     private  int positionCountry;
+    PieChart pieChart;
     TextView tvCountry,tvCases,tvRecovered,tvCritical,tvActive,tvTodayCases,tvTotalDeaths,tvTodayDeaths;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,7 +29,7 @@ public class DetailActivity extends AppCompatActivity {
 
 
 
-        getSupportActionBar().setTitle("Details of "+AffectedCountries.countryModelsList.get(positionCountry).getCountry());
+        getSupportActionBar().setTitle("Details of "+ AffectedCountries.countryModelsList.get(positionCountry).getCountry());
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
 
@@ -34,7 +41,7 @@ public class DetailActivity extends AppCompatActivity {
         tvTodayCases = findViewById(R.id.tvTodayCases);
         tvTotalDeaths = findViewById(R.id.tvDeaths);
         tvTodayDeaths = findViewById(R.id.tvTodayDeaths);
-
+        pieChart = findViewById(R.id.piechart2);
 
 
 
@@ -49,12 +56,17 @@ public class DetailActivity extends AppCompatActivity {
         tvTotalDeaths.setText(AffectedCountries.countryModelsList.get(positionCountry).getDeaths());
         tvTodayDeaths.setText(AffectedCountries.countryModelsList.get(positionCountry).getTodayDeaths());
 
-
+        pieChart.addPieSlice(new PieModel("Recovered",Integer.parseInt(tvRecovered.getText().toString()), Color.parseColor("#66BB6A")));
+        pieChart.addPieSlice(new PieModel("Deaths",Integer.parseInt(tvTotalDeaths.getText().toString()), Color.parseColor("#EF5350")));
+        pieChart.addPieSlice(new PieModel("Active",Integer.parseInt(tvActive.getText().toString()), Color.parseColor("#29B6F6")));
+        pieChart.startAnimation();
     }
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         if(item.getItemId()==android.R.id.home)
-            finish();
+
+
+        finish();
         return super.onOptionsItemSelected(item);
     }
 }

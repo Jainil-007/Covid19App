@@ -32,7 +32,7 @@
             android:layout_margin="10dp"
             android:background="@drawable/circlelight"
             android:padding="30dp"
-            android:text="@string/symptomsString"
+            android:text="@string/preventionString"
             android:textColor="@color/white" />
 
     </LinearLayout>
