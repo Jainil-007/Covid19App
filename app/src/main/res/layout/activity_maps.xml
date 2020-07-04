@@ -30,14 +30,18 @@
         android:layout_toRightOf="@+id/TF_location" />
 
 
-
     <LinearLayout
+        android:id="@+id/lll"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/lll"
+        android:layout_below="@+id/TF_location"
         android:layout_centerHorizontal="true"
-        android:layout_margin="7dp"
-        android:layout_below="@+id/TF_location">
+        android:layout_marginStart="7dp"
+        android:layout_marginLeft="7dp"
+        android:layout_marginTop="7dp"
+        android:layout_marginEnd="7dp"
+        android:layout_marginRight="7dp"
+        android:layout_marginBottom="7dp">
 
         <Button
             android:id="@+id/B_hopistals"
@@ -46,32 +50,30 @@
             android:layout_alignParentStart="true"
             android:layout_alignParentLeft="true"
             android:layout_marginLeft="3dp"
-            android:background="@drawable/send_sms_button"
-            android:onClick="onClick"
             android:layout_marginEnd="50dp"
+            android:layout_marginRight="3dp"
+            android:background="@drawable/send_sms_button"
 
-android:layout_marginRight="3dp"
+            android:onClick="onClick"
             android:text="Hospitals"
             android:textColor="@color/white" />
 
         <Button
-            android:id="@+id/B_schools"
+            android:id="@+id/B_pharmacy"
             android:layout_width="wrap_content"
             android:layout_height="38dp"
             android:layout_below="@+id/TF_location"
-            android:layout_toEndOf="@+id/B_hopistals"
-            android:textColor="@color/white"
-            android:layout_marginRight="3dp"
             android:layout_marginEnd="100dp"
+            android:layout_marginRight="3dp"
+            android:layout_toEndOf="@+id/B_hopistals"
             android:layout_toRightOf="@+id/B_hopistals"
             android:background="@drawable/call_button"
             android:onClick="onClick"
-            android:text="Pharmacy" />
+            android:text="Pharmacy"
+            android:textColor="@color/white" />
 
 
-
-
-</LinearLayout>
+    </LinearLayout>
     <fragment xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:map="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"

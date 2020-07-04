@@ -195,7 +195,7 @@ LocationListener{
 
 
 
-            case R.id.B_schools:
+            case R.id.B_pharmacy:
                 mMap.clear();
                 String pharmacy = "pharmacy";
                 url = getUrl(latitude, longitude, pharmacy);
