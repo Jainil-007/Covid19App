@@ -27,7 +27,8 @@
                 android:id="@+id/menu_Spinner"
                 android:layout_width="match_parent"
                 android:layout_height="36dp"
-                android:background="@drawable/corner" />
+                android:background="@drawable/corner"
+                android:layout_marginBottom="20dp"/>
 
             <LinearLayout
                 android:id="@+id/linear1"
