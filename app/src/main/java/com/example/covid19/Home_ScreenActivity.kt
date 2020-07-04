@@ -35,6 +35,8 @@ class Home_ScreenActivity : AppCompatActivity() {
         condata.setOnClickListener{ startActivity(Intent(this@Home_ScreenActivity, AffectedCountries::class.java)) }
         qrCodeScanner.setOnClickListener{ startActivity(Intent(this@Home_ScreenActivity, QrCodeActivity::class.java)) }
         NZGOV.setOnClickListener{ startActivity(Intent(this@Home_ScreenActivity, MapsActivity::class.java)) }
+        newsLayout.setOnClickListener{ startActivity(Intent(this@Home_ScreenActivity, MainActivity::class.java)) }
+
         button2.setOnClickListener {
             //get input from EditTexts and save in variables
             val recipient = ConstantValues.NZgov
