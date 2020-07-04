@@ -95,8 +95,7 @@ LocationListener{
     /**
      * Manipulates the map once available.
      * This callback is triggered when the map is ready to be used.
-     * This is where we can add markers or lines, add listeners or move the camera. In this case,
-     * we just add a marker near Sydney, Australia.
+     * This is where we can add markers or lines, add listeners or move the camera.
      * If Google Play services is not installed on the device, the user will be prompted to install
      * it inside the SupportMapFragment. This method will only be triggered once the user has
      * installed Google Play services and returned to the app.
@@ -195,20 +194,23 @@ LocationListener{
                 break;
 
 
+
             case R.id.B_schools:
                 mMap.clear();
-                String school = "school";
-                url = getUrl(latitude, longitude, school);
+                String pharmacy = "pharmacy";
+                url = getUrl(latitude, longitude, pharmacy);
                 dataTransfer[0] = mMap;
                 dataTransfer[1] = url;
 
                 getNearbyPlacesData.execute(dataTransfer);
-                Toast.makeText(MapsActivity.this, "Showing Nearby Schools", Toast.LENGTH_SHORT).show();
+                Toast.makeText(MapsActivity.this, "Showing Nearby pharmacies", Toast.LENGTH_SHORT).show();
                 break;
+
+
             case R.id.B_restaurants:
                 mMap.clear();
-                String resturant = "restuarant";
-                url = getUrl(latitude, longitude, resturant);
+                String restaurant = "restaurant";
+                url = getUrl(latitude, longitude, restaurant);
                 dataTransfer[0] = mMap;
                 dataTransfer[1] = url;
 
