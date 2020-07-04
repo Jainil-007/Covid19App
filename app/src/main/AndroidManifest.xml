@@ -26,7 +26,6 @@
             android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyB_gLiso49RA9yKPaTR05JD-5Hg_62T348" />
         <activity android:name=".MainActivity"></activity>
-
         <activity android:name=".SettingActivity"></activity>
         <activity android:name=".RegisterActivity" />
         <activity android:name=".NearestHospital.MapsActivity" />
@@ -42,8 +41,8 @@
             android:label="Symptoms"
             android:launchMode="singleTop" />
         <activity android:name=".ReportActivity" />
-        <activity android:name=".Home_ScreenActivity"/>
-        <activity android:name=".LoginActivity">
+        <activity android:name=".LoginActivity"/>
+        <activity android:name=".Home_ScreenActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

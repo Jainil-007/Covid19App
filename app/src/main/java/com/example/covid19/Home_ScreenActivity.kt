@@ -30,7 +30,7 @@ class Home_ScreenActivity : AppCompatActivity() {
     private fun init() {
 
         symptoms.setOnClickListener { startActivity(Intent(this@Home_ScreenActivity, SymptomActivity::class.java)) }
-        prevention.setOnClickListener{ startActivity(Intent(this@Home_ScreenActivity, SymptomActivity::class.java)) }
+        prevention.setOnClickListener{ startActivity(Intent(this@Home_ScreenActivity, PreventionActivity::class.java)) }
         Reports.setOnClickListener{ startActivity(Intent(this@Home_ScreenActivity, ReportActivity::class.java)) }
         condata.setOnClickListener{ startActivity(Intent(this@Home_ScreenActivity, AffectedCountries::class.java)) }
         qrCodeScanner.setOnClickListener{ startActivity(Intent(this@Home_ScreenActivity, QrCodeActivity::class.java)) }

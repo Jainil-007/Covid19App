@@ -10,7 +10,7 @@
 
     <androidx.core.widget.NestedScrollView
         android:id="@+id/nestedScrollView"
-        android:layout_width="0dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -29,13 +29,13 @@
                 android:layout_width="169dp"
                 android:layout_height="190dp"
                 android:layout_gravity="center"
-                android:src="@drawable/ic_preventionf" />
+                android:src="@drawable/ic_prevention" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
-                android:background="@drawable/circlelight"
+                android:background="@drawable/corner"
                 android:padding="30dp"
                 android:text="@string/symptomsString"
                 android:textColor="@color/white" />
