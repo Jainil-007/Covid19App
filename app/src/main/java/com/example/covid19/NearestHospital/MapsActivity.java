@@ -206,18 +206,6 @@ LocationListener{
                 Toast.makeText(MapsActivity.this, "Showing Nearby pharmacies", Toast.LENGTH_SHORT).show();
                 break;
 
-
-            case R.id.B_restaurants:
-                mMap.clear();
-                String restaurant = "restaurant";
-                url = getUrl(latitude, longitude, restaurant);
-                dataTransfer[0] = mMap;
-                dataTransfer[1] = url;
-
-                getNearbyPlacesData.execute(dataTransfer);
-                Toast.makeText(MapsActivity.this, "Showing Nearby Restaurants", Toast.LENGTH_SHORT).show();
-                break;
-            case R.id.B_to:
         }
     }
 
