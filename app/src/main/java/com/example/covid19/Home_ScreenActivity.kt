@@ -1,11 +1,13 @@
 package com.example.covid19
 
+import android.Manifest
 import android.annotation.SuppressLint
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.net.Uri
 import android.os.Bundle
-import android.widget.Toast
+import android.view.View
+import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import com.example.covid19.AffectedCountries.AffectedCountries
@@ -18,10 +20,10 @@ class Home_ScreenActivity : AppCompatActivity() {
     val phoneNumber = "0800 611 116"
     val REQUEST_PHONE_CALL = 1
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.home_screen)
+
         init()
     }
 
@@ -42,15 +44,44 @@ class Home_ScreenActivity : AppCompatActivity() {
             //method call for email intent with these inputs as parameters
             sendEmail(recipient, subject, message)
         }
+        val send = Intent(this, SettingActivity::class.java)
 
+        val spinnerItem = resources.getStringArray(R.array.menu)
+        val spinner = findViewById<Spinner>(R.id.menu_Spinner)
+        if (spinner != null){
+            val adapter = ArrayAdapter(
+                this,
+                android.R.layout.simple_spinner_item,
+                spinnerItem
+            )
+            adapter.setDropDownViewResource(R.layout.spin)
+            spinner.adapter = adapter
 
+            spinner.onItemSelectedListener = object :
+                AdapterView.OnItemSelectedListener{
+                override fun onNothingSelected(parent: AdapterView<*>?) {
+                    TODO("Not yet implemented")
+                }
 
+                override fun onItemSelected(
+                    parent: AdapterView<*>?,
+                    view: View?,
+                    position: Int,
+                    id: Long
+                ) {
+                    if(spinnerItem[position] == "Change Details"){
+                        val user = intent.getStringExtra("Username")
+                        send.putExtra("Username", user)
+                        startActivity(send)
+                    }
+                }
+            }
 
-
+        }
 
        button.setOnClickListener {
-           if(ActivityCompat.checkSelfPermission(this, android.Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED){
-               ActivityCompat.requestPermissions(this, arrayOf(android.Manifest.permission.CALL_PHONE),REQUEST_PHONE_CALL)
+           if(ActivityCompat.checkSelfPermission(this, Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED){
+               ActivityCompat.requestPermissions(this, arrayOf(Manifest.permission.CALL_PHONE),REQUEST_PHONE_CALL)
            }else{
                startCall()
            }
