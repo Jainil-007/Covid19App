@@ -1,5 +1,4 @@
-package com.example.covid19;
-
+package com.example.covid19.AffectedCountries;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -13,9 +12,11 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
 import com.bumptech.glide.Glide;
+import com.example.covid19.R;
 
 import java.util.ArrayList;
 import java.util.List;
+
 
 public class MyCustomAdapter extends ArrayAdapter<CountriesData> {
 
@@ -31,6 +32,7 @@ public class MyCustomAdapter extends ArrayAdapter<CountriesData> {
         this.countryModelsListFiltered = countryModelsList;
 
     }
+
 
     @NonNull
     @Override

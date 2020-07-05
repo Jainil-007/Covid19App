@@ -1,34 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.core.widget.NestedScrollView
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Home_ScreenActivity"
-  >
+    tools:context=".Home_ScreenActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@drawable/bg"
-        app:layout_constraintTop_toTopOf="parent"
-       >
-
+        app:layout_constraintTop_toTopOf="parent">
 
         <LinearLayout
             android:id="@+id/linear"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
             android:layout_marginTop="20dp"
+            android:orientation="vertical"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
+
+            <Spinner
+                android:id="@+id/menu_Spinner"
+                android:layout_width="match_parent"
+                android:layout_height="36dp"
+                android:background="@drawable/corner"
+                android:layout_marginBottom="20dp"/>
+
             <LinearLayout
                 android:id="@+id/linear1"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -104,129 +108,135 @@
             </LinearLayout>
 
             <LinearLayout
-            android:id="@+id/linear2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginTop="10dp"
-            tools:layout_editor_absoluteY="174dp"
-            app:layout_constraintTop_toBottomOf="@id/linear1">
+                android:id="@+id/linear2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toBottomOf="@id/linear1"
+                tools:layout_editor_absoluteY="174dp">
 
 
-            <LinearLayout
-                android:id="@+id/Reports"
-                android:layout_width="171dp"
-                android:layout_height="150dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="15dp"
-                android:layout_marginRight="8dp"
-                android:layout_marginBottom="8dp"
-                android:layout_weight="1"
-                android:background="@drawable/corner"
-                android:elevation="5dp"
-                android:orientation="vertical"
-                android:padding="20dp">
+                <LinearLayout
+                    android:id="@+id/Reports"
+                    android:layout_width="171dp"
+                    android:layout_height="150dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/corner"
+                    android:elevation="5dp"
+                    android:orientation="vertical"
+                    android:padding="20dp">
 
-                <ImageView
-                    android:layout_width="60dp"
-                    android:layout_height="60dp"
-                    android:layout_gravity="center"
-                    android:layout_marginTop="10dp"
-                    android:src="@drawable/ic_chart" />
+                    <ImageView
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="10dp"
+                        android:src="@drawable/ic_piechart" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="49dp"
-                    android:layout_gravity="center"
-                    android:layout_marginTop="5dp"
-                    android:text="Reports"
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="49dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="5dp"
+                        android:text="Reports"
 
-                    android:textColor="@color/white"
-                    android:textSize="18sp" />
+                        android:textColor="@color/white"
+                        android:textSize="18sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/condata"
+                    android:layout_width="260dp"
+                    android:layout_height="150dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="8dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/corner"
+                    android:elevation="5dp"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+
+                    <ImageView
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="10dp"
+                        android:src="@drawable/ic_countries" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="49dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="5dp"
+                        android:text="Affected Countries"
+                        android:textColor="@color/white"
+                        android:textSize="18sp" />
+
+                </LinearLayout>
 
             </LinearLayout>
 
-            <LinearLayout
-                android:id="@+id/condata"
-                android:layout_width="260dp"
-                android:layout_height="150dp"
-                android:layout_marginLeft="8dp"
-                android:layout_marginTop="16dp"
-                android:layout_marginRight="10dp"
-                android:layout_marginBottom="8dp"
-                android:layout_weight="1"
-                android:elevation="5dp"
-                android:background="@drawable/corner"
-                android:orientation="vertical"
-                android:padding="20dp">
-
-                <ImageView
-                    android:layout_width="60dp"
-                    android:layout_height="60dp"
-                    android:layout_gravity="center"
-                    android:layout_marginTop="10dp"
-                    android:src="@drawable/ic_countries" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="49dp"
-                    android:layout_gravity="center"
-                    android:layout_marginTop="5dp"
-                    android:text="Affected Countries"
-                    android:textColor="@color/white"
-                    android:textSize="18sp" />
-
-            </LinearLayout>
-
-        </LinearLayout>
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
+
                 <TextView
-                android:id="@+id/textViewq"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="32dp" android:layout_marginLeft="20dp"
-                android:text="Are you feeling sick?"
-                android:textColor="#FFFFFF"
-                android:textSize="20sp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView" />
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="40dp"
-                android:layout_marginLeft="45dp"
-                android:layout_marginTop="25dp"
-                android:background="@drawable/spinner_bg"
-                android:gravity="center"
-                app:layout_constraintEnd_toEndOf="parent">
+                    android:id="@+id/textViewq"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="32dp"
+                    android:text="Are you feeling sick?"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView" />
 
-                <ImageView
-                    android:id="@+id/flag"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_marginLeft="8dp"
-                    android:layout_marginTop="12dp"
-                    android:layout_marginBottom="12dp"
-                    android:background="@drawable/ic_nz" />
-
-                <Spinner
-                    android:id="@+id/spinner"
+                <LinearLayout
                     android:layout_width="100dp"
                     android:layout_height="30dp"
-                    android:layout_marginTop="12dp"
-                    android:layout_marginBottom="12dp" />
+                    android:layout_marginLeft="55dp"
+                    android:layout_marginTop="30dp"
+                    android:background="@drawable/spinner_bg"
+                    android:gravity="center"
+                    app:layout_constraintEnd_toEndOf="parent">
 
+                    <ImageView
+                        android:id="@+id/flag"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+
+                        android:layout_marginTop="12dp"
+                        android:layout_marginBottom="12dp"
+                        android:background="@drawable/ic_nz" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:textColor="@color/black"
+                        android:text="New Zealand"
+                        android:textSize="10dp" />
+
+                </LinearLayout>
             </LinearLayout>
-            </LinearLayout>
-        <TextView
+
+            <TextView
                 android:id="@+id/textView3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
                 android:layout_marginTop="16dp"
                 android:lineSpacingExtra="8dp"
-                android:layout_marginLeft="20dp"
                 android:text="If you feel sick with any of covid-19 symptoms\nplease call or SMS us immediately for help."
                 android:textColor="#FFFFFF"
                 app:layout_constraintStart_toStartOf="parent"
@@ -245,30 +255,30 @@
 
                 <Button
                     android:id="@+id/button"
-                    android:layout_width="141dp"
+                    android:layout_width="151dp"
                     android:layout_height="45dp"
+                    android:layout_marginLeft="20dp"
                     android:layout_marginTop="32dp"
                     android:background="@drawable/call_button"
                     android:drawableLeft="@drawable/ic_phone"
                     android:drawablePadding="8dp"
                     android:paddingLeft="16dp"
                     android:text="Call Now"
-                    android:layout_marginLeft="20dp"
                     android:textAllCaps="false"
                     android:textColor="#FFFFFF"
                     android:textSize="16sp" />
 
                 <Button
                     android:id="@+id/button2"
-                    android:layout_width="146dp"
-                    android:layout_marginTop="30dp"
-                    android:layout_marginLeft="50dp"
+                    android:layout_width="156dp"
                     android:layout_height="45dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="30dp"
                     android:background="@drawable/send_sms_button"
                     android:drawableLeft="@drawable/ic_message_circle"
                     android:drawablePadding="8dp"
-                    android:paddingLeft="16dp"
-                    android:text="Send SMS"
+                    android:paddingLeft="10dp"
+                    android:text="Send Email"
                     android:textAllCaps="false"
                     android:textColor="#FFFFFF"
                     android:textSize="16sp" />
@@ -283,145 +293,136 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:padding="16dp"
-            tools:layout_editor_absoluteY="359dp"
-            app:layout_constraintTop_toBottomOf="@id/linear">
+            app:layout_constraintTop_toBottomOf="@id/linear"
+            tools:layout_editor_absoluteY="359dp">
 
-        <LinearLayout
-            android:id="@+id/linear3"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:padding="16dp"
-            android:elevation="6dp"
-            android:background="@drawable/circleup"
-            tools:layout_editor_absoluteY="359dp"
-            app:layout_constraintTop_toBottomOf="@id/linear2">
-
-            <RelativeLayout
-                android:id="@+id/newsLayout"
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:id="@+id/linear3"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginBottom="20dp"
-                android:background="@drawable/corner"
-                android:elevation="5dp"
-                android:padding="12dp"
-                app:layout_constraintTop_toBottomOf="@id/linear2">
+                android:background="@drawable/circleup"
+                android:elevation="6dp"
+                android:orientation="vertical"
+                android:padding="16dp"
+                app:layout_constraintTop_toBottomOf="@id/linear2"
+                tools:layout_editor_absoluteY="359dp">
 
-                <ImageView
-                    android:id="@+id/image"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:background="@drawable/corner"
-                    android:src="@drawable/ic_news" />
-
-                <TextView
-                    android:id="@+id/txt"
+                <RelativeLayout
+                    android:id="@+id/newsLayout"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_centerVertical="true"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginLeft="16dp"
-                    android:layout_toRightOf="@id/image"
-                    android:text="COVID-19 News"
-                    android:textColor="@color/white"
-                    android:textSize="16sp" />
-
-                <ImageView
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_marginLeft="15dp"
-                    android:layout_marginTop="5dp"
-                    android:layout_toRightOf="@id/txt"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="20dp"
                     android:background="@drawable/corner"
-                    android:backgroundTint="@color/white"
-                    android:src="@drawable/ic_next" />
-
-            </RelativeLayout>
-
-            <RelativeLayout
-                android:id="@+id/qrCodeScanner"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginBottom="20dp"
-                android:elevation="5dp"
-                android:background="@drawable/corner"
-                android:padding="12dp"
-                app:layout_constraintTop_toBottomOf="@id/newsLayout">
-
-                <ImageView
-                    android:id="@+id/igm"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:background="@drawable/corner"
-                    android:backgroundTint="@color/white"
-                    android:src="@drawable/ic_qrcode" />
-
-                <TextView
-                    android:id="@+id/txt1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerVertical="true"
-                    android:layout_marginLeft="10dp"
-                    android:layout_toRightOf="@id/igm"
-                    android:text="QR Code Scanner"
-                    android:textColor="@color/white"
-                    android:textSize="16sp" />
-
-                <ImageView
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_marginLeft="6dp"
-                    android:layout_marginTop="5dp"
-                    android:layout_toRightOf="@id/txt1"
-                    android:background="@drawable/corner"
-                    android:backgroundTint="@color/white"
-                    android:src="@drawable/ic_next" />
-
-            </RelativeLayout>
-
-
-            <RelativeLayout
-                android:id="@+id/NZGOV"
-                android:layout_width="227dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginBottom="20dp"
-                android:background="@drawable/corner"
-                android:elevation="5dp"
-                android:padding="12dp"
-                app:layout_constraintTop_toBottomOf="@id/qrCodeScanner">
-
-                <ImageView
-                    android:id="@+id/research"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:background="@drawable/corner"
-                    android:src="@drawable/ic_hospital"
-                    />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerVertical="true"
-                    android:layout_marginLeft="10dp"
-                    android:layout_toRightOf="@id/research"
-                    android:text="Nearest Hospital"
                     android:elevation="5dp"
-                    android:textColor="@color/white"
-                    android:textSize="16sp" />
+                    android:padding="12dp"
+                    app:layout_constraintTop_toBottomOf="@id/linear2">
 
-            </RelativeLayout>
+                    <ImageView
+                        android:id="@+id/image"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/corner"
+                        android:src="@drawable/ic_news" />
 
-            <Button
-                android:id="@+id/settings_Btn"
-                android:layout_width="wrap_content"
-                android:layout_height="35dp"
-                android:background="@drawable/call_button"
-                android:text="Settings" />
-        </LinearLayout>
+                    <TextView
+                        android:id="@+id/txt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_toRightOf="@id/image"
+                        android:text="COVID-19 News"
+                        android:textColor="@color/white"
+                        android:textSize="16sp" />
 
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_toRightOf="@id/txt"
+                        android:background="@drawable/corner"
+                        android:backgroundTint="@color/white"
+                        android:src="@drawable/ic_next" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/qrCodeScanner"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="20dp"
+                    android:background="@drawable/corner"
+                    android:elevation="5dp"
+                    android:padding="12dp"
+                    app:layout_constraintTop_toBottomOf="@id/newsLayout">
+
+                    <ImageView
+                        android:id="@+id/igm"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/corner"
+                        android:backgroundTint="@color/white"
+                        android:src="@drawable/ic_qrcode" />
+
+                    <TextView
+                        android:id="@+id/txt1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toRightOf="@id/igm"
+                        android:text="QR Code Scanner"
+                        android:textColor="@color/white"
+                        android:textSize="16sp" />
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="6dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_toRightOf="@id/txt1"
+                        android:background="@drawable/corner"
+                        android:backgroundTint="@color/white"
+                        android:src="@drawable/ic_next" />
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/NZGOV"
+                    android:layout_width="227dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="20dp"
+                    android:background="@drawable/corner"
+                    android:elevation="5dp"
+                    android:padding="12dp"
+                    app:layout_constraintTop_toBottomOf="@id/qrCodeScanner">
+
+                    <ImageView
+                        android:id="@+id/research"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/corner"
+                        android:src="@drawable/ic_hospital" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toRightOf="@id/research"
+                        android:elevation="5dp"
+                        android:text="Nearest Hospital"
+                        android:textColor="@color/white"
+                        android:textSize="16sp" />
+
+                </RelativeLayout>
+            </LinearLayout>
 
 
             <TextView
@@ -436,8 +437,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="4dp"
-                android:textColor="@color/black"
                 android:text="Follow this tips to stay healthy "
+                android:textColor="@color/black"
                 android:textSize="14sp" />
 
             <LinearLayout
@@ -453,8 +454,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:gravity="center"
                     android:clickable="true"
+                    android:gravity="center"
                     android:orientation="vertical">
 
                     <ImageView
@@ -462,8 +463,8 @@
                         android:layout_width="75dp"
                         android:layout_height="75dp"
                         android:background="@drawable/circle"
-                        android:scaleType="center"
                         android:elevation="7dp"
+                        android:scaleType="center"
                         android:src="@drawable/ic_mask" />
 
                     <TextView
@@ -486,8 +487,8 @@
                         android:layout_width="75dp"
                         android:layout_height="75dp"
                         android:background="@drawable/circle"
-                        android:scaleType="center"
                         android:elevation="7dp"
+                        android:scaleType="center"
                         android:src="@drawable/ic_gloves" />
 
                     <TextView
@@ -511,8 +512,8 @@
                         android:layout_width="75dp"
                         android:layout_height="75dp"
                         android:background="@drawable/circle"
-                        android:scaleType="center"
                         android:elevation="7dp"
+                        android:scaleType="center"
                         android:src="@drawable/ic_sanitizer" />
 
                     <TextView
@@ -536,8 +537,8 @@
                         android:layout_width="75dp"
                         android:layout_height="75dp"
                         android:background="@drawable/circle"
-                        android:scaleType="center"
                         android:elevation="7dp"
+                        android:scaleType="center"
                         android:src="@drawable/ic_soap" />
 
                     <TextView
@@ -573,8 +574,8 @@
                         android:layout_width="75dp"
                         android:layout_height="75dp"
                         android:background="@drawable/circle"
-                        android:scaleType="fitCenter"
                         android:elevation="7dp"
+                        android:scaleType="fitCenter"
                         android:src="@drawable/ic_20sec" />
 
                     <TextView
@@ -597,8 +598,8 @@
                         android:layout_width="75dp"
                         android:layout_height="75dp"
                         android:background="@drawable/circle"
-                        android:scaleType="center"
                         android:elevation="7dp"
+                        android:scaleType="center"
                         android:src="@drawable/ic_crowd" />
 
                     <TextView
@@ -630,14 +631,13 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="4dp"
-                        android:textColor="@color/black"
                         android:text="Distance"
+                        android:textColor="@color/black"
                         android:textSize="16sp" />
                 </LinearLayout>
 
 
             </LinearLayout>
-
         </LinearLayout>
 
 

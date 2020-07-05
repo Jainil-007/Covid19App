@@ -1,4 +1,4 @@
-package com.example.covid19;
+package com.example.covid19.AffectedCountries;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -20,6 +20,7 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
+import com.example.covid19.R;
 
 
 import org.json.JSONArray;
@@ -57,7 +58,7 @@ public class AffectedCountries extends AppCompatActivity {
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                startActivity(new Intent(getApplicationContext(),DetailActivity.class).putExtra("position",position));
+                startActivity(new Intent(getApplicationContext(), DetailActivity.class).putExtra("position",position));
             }
         });
 
@@ -78,37 +79,30 @@ public class AffectedCountries extends AppCompatActivity {
 
             @Override
             public void afterTextChanged(Editable s) {
-
             }
         });
     }
-
-
-
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         if(item.getItemId()==android.R.id.home)
             finish();
         return super.onOptionsItemSelected(item);
     }
-
     private void fetchData() {
 
         String url  = "https://corona.lmao.ninja/v2/countries/";
 
-
         StringRequest request = new StringRequest(Request.Method.GET, url,
                 new Response.Listener<String>() {
+
                     @Override
                     public void onResponse(String response) {
 
                         try {
                             JSONArray jsonArray = new JSONArray(response);
-
                             for(int i=0;i<jsonArray.length();i++){
 
                                 JSONObject jsonObject = jsonArray.getJSONObject(i);
-
                                 String countryName = jsonObject.getString("country");
                                 String cases = jsonObject.getString("cases");
                                 String todayCases = jsonObject.getString("todayCases");
@@ -117,24 +111,13 @@ public class AffectedCountries extends AppCompatActivity {
                                 String recovered = jsonObject.getString("recovered");
                                 String active = jsonObject.getString("active");
                                 String critical = jsonObject.getString("critical");
-
                                 JSONObject object = jsonObject.getJSONObject("countryInfo");
                                 String flagUrl = object.getString("flag");
-
                                 countryModel = new CountriesData(flagUrl,countryName,cases,todayCases,deaths,todayDeaths,recovered,active,critical);
                                 countryModelsList.add(countryModel);
-
-
                             }
-
                                 myCustomAdapter = new MyCustomAdapter(AffectedCountries.this,countryModelsList);
                                 listView.setAdapter(myCustomAdapter);
-
-
-
-
-
-
 
                         } catch (JSONException e) {
                             e.printStackTrace();
