@@ -48,6 +48,7 @@ class Home_ScreenActivity : AppCompatActivity() {
             sendEmail(recipient, subject, message)
         }
         val send = Intent(this, SettingActivity::class.java)
+        val terms = Intent(this, TermCondition::class.java)
 
         val spinnerItem = resources.getStringArray(R.array.menu)
         val spinner = findViewById<Spinner>(R.id.menu_Spinner)
@@ -76,6 +77,10 @@ class Home_ScreenActivity : AppCompatActivity() {
                         val user = intent.getStringExtra("Username")
                         send.putExtra("Username", user)
                         startActivity(send)
+                    }
+                    else if(spinnerItem[position] == "About Us")
+                    {
+                        startActivity(terms)
                     }
                 }
             }
