@@ -50,9 +50,12 @@ LocationListener{
     private LocationRequest locationRequest;
     private Location lastlocation;
     private Marker currentLocationmMarker;
+
     public static final int REQUEST_LOCATION_CODE = 99;
+
     int PROXIMITY_RADIUS = 10000;
     double latitude,longitude;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -151,14 +154,18 @@ LocationListener{
 
         switch(v.getId())
         {
+            // when the search button is clicked then this function is executed
             case R.id.B_search:
                 EditText tf_location =  findViewById(R.id.TF_location);
+
+
                 String location = tf_location.getText().toString();
                 List<Address> addressList;
 
 
                 if(!location.equals(""))
                 {
+                    // searching for the location that user entered in the text box
                     Geocoder geocoder = new Geocoder(this);
 
                     try {
@@ -166,6 +173,8 @@ LocationListener{
 
                         if(addressList != null)
                         {
+                            // if the user entered location is found then this for loop is executed for all the search results in list addressList object so that every search result contains location value.
+
                             for(int i = 0;i<addressList.size();i++)
                             {
                                 LatLng latLng = new LatLng(addressList.get(i).getLatitude() , addressList.get(i).getLongitude());
@@ -182,9 +191,16 @@ LocationListener{
                     }
                 }
                 break;
+
+                // If user clicks on the hospital button following code is executed.
+
             case R.id.B_hopistals:
+                //this clears previous location data.
                 mMap.clear();
                 String hospital = "hospital";
+
+                // sending keyword hospital to the places api servers and receives all the location of hospitals.
+
                 String url = getUrl(latitude, longitude, hospital);
                 dataTransfer[0] = mMap;
                 dataTransfer[1] = url;
@@ -212,7 +228,7 @@ LocationListener{
 
     private String getUrl(double latitude , double longitude , String nearbyPlace)
     {
-
+//fetching data from the places api and converting them to string
         StringBuilder googlePlaceUrl = new StringBuilder("https://maps.googleapis.com/maps/api/place/nearbysearch/json?");
         googlePlaceUrl.append("location="+latitude+","+longitude);
         googlePlaceUrl.append("&radius="+PROXIMITY_RADIUS);

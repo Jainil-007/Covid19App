@@ -11,6 +11,7 @@ import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import com.example.covid19.AffectedCountries.AffectedCountries
+import com.example.covid19.CovidNews.CovidNewsActivity
 import com.example.covid19.NearestHospital.MapsActivity
 import kotlinx.android.synthetic.main.home_screen.*
 
@@ -35,7 +36,7 @@ class Home_ScreenActivity : AppCompatActivity() {
         condata.setOnClickListener{ startActivity(Intent(this@Home_ScreenActivity, AffectedCountries::class.java)) }
         qrCodeScanner.setOnClickListener{ startActivity(Intent(this@Home_ScreenActivity, QrCodeActivity::class.java)) }
         NZGOV.setOnClickListener{ startActivity(Intent(this@Home_ScreenActivity, MapsActivity::class.java)) }
-        newsLayout.setOnClickListener{ startActivity(Intent(this@Home_ScreenActivity, MainActivity::class.java)) }
+        newsLayout.setOnClickListener{ startActivity(Intent(this@Home_ScreenActivity, CovidNewsActivity::class.java)) }
 
         button2.setOnClickListener {
             //get input from EditTexts and save in variables
