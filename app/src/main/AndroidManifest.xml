@@ -41,8 +41,8 @@
             android:label="Symptoms"
             android:launchMode="singleTop" />
         <activity android:name=".ReportActivity" />
-        <activity android:name=".LoginActivity"/>
-        <activity android:name=".Home_ScreenActivity">
+        <activity android:name=".Home_ScreenActivity"/>
+        <activity android:name=".LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
