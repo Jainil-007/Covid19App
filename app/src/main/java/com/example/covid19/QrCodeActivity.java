@@ -4,11 +4,9 @@ import android.Manifest;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
-import android.hardware.Camera;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
-import android.util.Log;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AlertDialog;
@@ -29,6 +27,7 @@ public class QrCodeActivity extends AppCompatActivity implements ZXingScannerVie
 
 
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -41,7 +40,7 @@ public class QrCodeActivity extends AppCompatActivity implements ZXingScannerVie
         {
             if(checkPermission())
             {
-                Toast.makeText(getApplicationContext(), "Permission already granted!", Toast.LENGTH_LONG).show();
+                Toast.makeText(getApplicationContext(), "welcome", Toast.LENGTH_LONG).show();
             }
             else
             {
@@ -68,12 +67,12 @@ public class QrCodeActivity extends AppCompatActivity implements ZXingScannerVie
 
                     boolean cameraAccepted = grantResults[0] == PackageManager.PERMISSION_GRANTED;
                     if (cameraAccepted){
-                        Toast.makeText(QrCodeActivity.this, "Permission Granted, Now you can access camera", Toast.LENGTH_LONG).show();
+                        Toast.makeText(QrCodeActivity.this, "Permission is Granted, Now camera can be accessed", Toast.LENGTH_LONG).show();
                     }else {
-                        Toast.makeText(QrCodeActivity.this, "Permission Denied, You cannot access and camera", Toast.LENGTH_LONG).show();
+                        Toast.makeText(QrCodeActivity.this, "Permission Denied, cannot access camera", Toast.LENGTH_LONG).show();
                         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
                             if (shouldShowRequestPermissionRationale(CAMERA)) {
-                                showMessageOKCancel("You need to allow access to both the permissions",
+                                showMessageOKCancel("the app need both permission to be used",
                                         new DialogInterface.OnClickListener() {
                                             @Override
                                             public void onClick(DialogInterface dialog, int i) {
