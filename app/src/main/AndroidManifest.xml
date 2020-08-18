@@ -24,7 +24,7 @@
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="AIzaSyB_gLiso49RA9yKPaTR05JD-5Hg_62T348" />
+            android:value="Your Google maps API" />
         <activity android:name=".CovidNews.CovidNewsActivity"></activity>
         <activity android:name=".SettingActivity"></activity>
         <activity android:name=".RegisterActivity" />
