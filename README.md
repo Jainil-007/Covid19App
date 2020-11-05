@@ -7,7 +7,8 @@ Home screen of the application
 
 
 
-                                                        <img src="Images/CovidNews.jpg" width="300" height="500">    <img src="Images/Countries.jpg" width="300" height="500">
+                                                        <img src="Images/CovidNews.jpg" width="300" height="500">   
+                                                        <img src="Images/Countries.jpg" width="300" height="500">
 
 
 
